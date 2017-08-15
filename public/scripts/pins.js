@@ -22,6 +22,7 @@ $(document).ready(function(){
           one_block += "<small>Apr 19</small>";
           one_block += "<button class=\"btn btn-trend square btn-sm\" >New</button>";
           one_block += "</div>";
+          one_block += "</div>";
 
           var content_to_add = "";
 
