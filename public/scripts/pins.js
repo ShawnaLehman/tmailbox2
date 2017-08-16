@@ -4,6 +4,9 @@ $(document).ready(function(){
     success : function (result) {
       var communications = result.data.messages;
       console.log(communications);
+      var content_to_add = "";
+
+      for(var i = 0; i < communications.length; i++) {
 
         var  one_block = "<div class=\"row clickable hoverClass \"  style=\"padding-bottom: 15px; padding-left: 10px; padding-top: 15px;\">";
           one_block += "<div class=\"col col-xs-2\" >";
@@ -13,9 +16,9 @@ $(document).ready(function(){
           one_block += "<div class=\"row\">";
           one_block += "<div class=\"col col-xs-12\"><small>Porsche North York</small></div>";
           one_block += "<div class=\"col col-xs-12\" style=\"color: gray\">";
-          one_block += "<strong>What is the VIP programm </strong>";
+          one_block += "<strong>" + communications[i].comm_subject + "</strong>";
           one_block += "</div>";
-          one_block += "<div class=\"col col-xs-12 mailbox-details\">Information regarding Payout</div>";
+          one_block += "<div class=\"col col-xs-12 mailbox-details\">" + communications[i].comm_content + "</div>";
           one_block += "</div>";
           one_block += "</div>";
           one_block += "<div class=\"col col-xs-2 text-right\">";
@@ -24,16 +27,11 @@ $(document).ready(function(){
           one_block += "</div>";
           one_block += "</div>";
 
-          var content_to_add = "";
-
           //putting one block inside the holder
-
-          for(var i = 1; i <= communications.length; i++) {
              content_to_add += one_block;
           }
 
             $('#allTipsDiv').html(content_to_add)
-            // alert(content_to_add)
 
     }
   })
