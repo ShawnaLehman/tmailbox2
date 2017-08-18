@@ -136,7 +136,15 @@ a {
 
 }
 
-
+.contents_block {
+  float: right;
+  display: inline-block;
+  min-height: 200px;
+  max-height: 200px;
+  background-color: : #d3d3d3;
+  margin-left: 20%;
+  margin-top: 10%;
+}
 
 a:active,
 

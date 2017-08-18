@@ -62,6 +62,9 @@ $(document).ready(function(){
                 $.ajax({
                   url: get_id_url,
                   success: function(result) {
+                    $('.block_msg_area').html(result.data.message.comm_content)
+                    $('.block_subject_area').html(result.data.message.comm_subject)
+
                     console.log(result.data.message.comm_content);
                   }
                 })
