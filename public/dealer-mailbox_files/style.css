@@ -16634,6 +16634,11 @@ pre {
 
 }
 
+.selected-block {
+  background-color: #93439a;
+  color: white;
+}
+
 strong.heading{
 
     font-size: 14px;

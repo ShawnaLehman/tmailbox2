@@ -27,7 +27,7 @@ $(document).ready(function(){
           one_block += "<div class=\"col col-xs-12\" style=\"color: gray\">";
           one_block += "<strong>" + communications[i].comm_subject + "</strong>";
           one_block += "</div>";
-          one_block += "<div class=\"col col-xs-12 mailbox-details\">" + communications[i].comm_content + "</div>";
+          one_block += "<div class=\"col col-xs-12 mailbox-details comm-content\">" + communications[i].comm_content + "</div>";
           one_block += "</div>";
           one_block += "</div>";
           one_block += "<div class=\"col col-xs-2 text-right\">";
@@ -52,8 +52,19 @@ $(document).ready(function(){
             $('.hoverClass').click(function(){
               $('.hoverClass').css("background", "white")
               $(this).css("background", "#93439a");
+              // $(this).css("color", "white");
 
               var selected_comm_id =  $(this).attr('id');
+
+                // go get content for selected message by its id
+                var get_id_url = "http://app2.loans.cars/api/dealer/message/" + selected_comm_id;
+
+                $.ajax({
+                  url: get_id_url,
+                  success: function(result) {
+                    console.log(result.data.message.comm_content);
+                  }
+                })
 
               console.log(selected_comm_id);
             })
