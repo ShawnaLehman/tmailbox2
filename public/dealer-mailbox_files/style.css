@@ -16696,16 +16696,22 @@ strong.heading{
     font-weight: normal;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.change-icon > .fa + .fa,
+/* .change-icon > .fa + .fa,
 .change-icon:hover > .fa {
   display: none;
 }
 .change-icon:hover > .fa + .fa {
   display: inherit;
-}
+} */
 .fa-star{
-    color: #FFB600;
+    color: #CC4B37;
 }
+/* .fa-star-o {
+    color: black;
+}
+.fa-star-o:hover {
+    color: #CC4B37;
+} */
 .big-thumb-track{
     margin-top: 85px;
     display: block;
