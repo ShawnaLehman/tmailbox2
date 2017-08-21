@@ -129,9 +129,9 @@
                                       
                                         
                                          
-                                            <a title="Deal Messages" href="dealer-mailbox-dealmessages.html" class="btn btn-default relative " id="addTipBtn">Deal Messages <em class="fa fa-commenting-o" aria-hidden="true"></em><span class="badge blue">5</span></a> <a title="Deal Notifications" href="dealer-mailbox-notifications.html" class="btn btn-default relative margin-l-5">Notifications <em class="fa fa-bullhorn" aria-hidden="true"></em><span class="badge blue">5</span></a> <a title="Audit Alerts" href="dealer-mailbox-auditalerts.html" class="btn btn-default relative margin-l-5 disabled">Alerts <em class="fa fa-bell-o" aria-hidden="true"></em><span class="badge yellow">7</span></a> 
+                                            <a title="Deal Messages" href="dealer-mailbox-dealmessages.html" class="btn btn-default relative " id="addTipBtn">Deal Messages <em class="fa fa-commenting-o" aria-hidden="true"></em><span class="badge blue">5</span></a> <a title="Deal Notifications" href="dealer-mailbox-notifications.html" class="btn btn-default relative margin-l-5">Notifications <em class="fa fa-bullhorn" aria-hidden="true"></em><span class="badge blue">5</span></a> <a title="Audit Alerts" href="dealer-mailbox-auditalerts.html" class="btn btn-default relative margin-l-5 disabled">Alerts <em class="fa fa-bell-o" aria-hidden="true"></em><span class="badge yellow" id="alert_count"></span></a> 
                                             
-                                              <a title="Pinned Content" href="dealer-mailbox-pins.html" class="btn btn-default relative margin-l-5 ">Pins <em class="fa fa-thumb-tack" aria-hidden="true"></em><span class="badge red">3</span></a>
+                                              <a title="Pinned Content" href="dealer-mailbox-pins.html" class="btn btn-default relative margin-l-5 ">Pins <em class="fa fa-thumb-tack" aria-hidden="true"></em><span class="badge red" id="pin_count"></span></a>
                                             
                                             <a title="Mail" href="dealer-mailbox.html" class="btn btn-default relative margin-l-5">Mail <em class="fa fa-envelope-o" aria-hidden="true"></em><span class="badge trend">3</span></a>
                                             
@@ -174,7 +174,8 @@
 
                                           <div class="col-xs-5 padding-left-0 padding-right-0">
                                             <div id="allTipsDiv" class="pre-scrollable col-xs-12" style="max-height: 674px;">
-                                                <div class="row clickable hoverClass " id="0" style="padding-bottom: 15px; padding-left: 10px; padding-top: 15px;">
+
+                                                <!-- <div class="row clickable hoverClass " id="0" style="padding-bottom: 15px; padding-left: 10px; padding-top: 15px;">
                                                   <div class="col col-xs-2" >
                                                       <input type="checkbox" style="margin-right: 5px;" >   
                                                       <span class="change-icon">
@@ -200,187 +201,8 @@
                                                   
                                                     </div>
                                                     
-                                                </div>
-
-                                                <div class="row clickable hoverClass grayBGColor" id="0" style="padding-bottom: 15px; padding-left: 10px; padding-top: 15px;">
-                                                 <div class="col col-xs-2" >
-                                                                  <input type="checkbox" style="margin-right: 5px;">
-                                                                  <span class="change-icon"> <span class="change-icon"> <em style="color:#CC4B37" class="fa fa-thumb-tack fa-lg" aria-hidden="true"></em> <em class="fa fa-thumb-tack fa-lg" aria-hidden="true"></em> </span> </span></div>
-                                                                <div class="col col-xs-8" style="margin-left: -15px;">
-                                                                    <div class="row">
-                                                            <div class="col col-xs-12"><small>Karz Auto Sales - Deal #12312321</small></div>
-                                                            
-                                                            <div class="col col-xs-12" style="color: gray">
-                                                        <strong>Revenue Canada Alert</strong>
-                                                            </div>
-                                                            
-                                                            <div class="col col-xs-12 mailbox-details">Information incorrectly entered by customer</div>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                    
-                                                    
-                                                    <div class="col col-xs-2 text-right">
-                                                        <small>Apr 19</small>    
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-
-                                                <div class="row clickable hoverClass " id="0" style="padding-bottom: 15px; padding-left: 10px; padding-top: 15px;">
-                                                    <div class="col col-xs-2" >
-                                                                  <input type="checkbox" style="margin-right: 5px;">
-                                                                  <span class="change-icon"> <span class="change-icon"> <em style="color:#CC4B37" class="fa fa-thumb-tack fa-lg" aria-hidden="true"></em> <em class="fa fa-thumb-tack fa-lg" aria-hidden="true"></em> </span> </span></div>
-                                                                <div class="col col-xs-8" style="margin-left: -15px;">
-                                                                    <div class="row">
-                                                                    
-                                                            <div class="col col-xs-12"><small>Trend Financial - Deal #989893</small></div>
-                                                            
-                                                        <div class="col col-xs-12" style="color: gray">
-                                                        <strong>Job References</strong></div>
-                                                            
-                                                            <div class="col col-xs-12 mailbox-details">
-                                                            <small><em>Missing Address from Personal Reference 2</small></em></div>
-                                                      </div>
-                                                        
-                                                    </div>
-                                                    <div class="col col-xs-2 text-right"><small>Apr 18</small>
-                                                  </div>
-                                                    
-                                                </div>
-
-                                                <div class="row clickable hoverClass trendBKColor" id="0" style="padding-bottom: 15px; padding-left: 10px; padding-top: 15px;">
-                                                  <div class="col col-xs-2" >
-                                                                  <input type="checkbox" style="margin-right: 5px;">
-                                                                  <span class="change-icon"> <span class="change-icon"> <em style="color:#CC4B37" class="fa fa-thumb-tack fa-lg" aria-hidden="true"></em> <em class="fa fa-thumb-tack fa-lg" aria-hidden="true"></em> </span> </span></div>
-                                                                <div class="col col-xs-8" style="margin-left: -15px;">
-                                                                    <div class="row">
-                                                                    
-                                                            <div class="col col-xs-9"><small>Buddz BMW - Deal# 543543543</small></div>
-                                                            <div class="col col-xs-3 text-right"><small>Apr 17</small></div>
-                                                            <div class="col col-xs-12"><strong>Credit References</strong></div>
-                                                            <div class="col col-xs-12 mailbox-details">
-                                                                Incorrect Data Entered
-                                                            </div>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                    
-                                                </div>
-
-                                                <div class="row clickable hoverClass " id="0" style="padding-bottom: 15px; padding-left: 10px; padding-top: 15px;">
-                                                    <div class="col col-xs-2" >
-                                                      <input type="checkbox" style="margin-right: 5px;" >   
-                                                      <span class="change-icon">
-                                                            <i class="fa fa-thumb-tack fa-lg" aria-hidden="true"></i>
-                                                            <i style="color:#CC4B37" class="fa fa-thumb-tack fa-lg" aria-hidden="true" title="Pin It"></i>
-                                                      </span>
-                                                      
-                                                    </div>
-                                                    <div class="col col-xs-8" style="margin-left: -15px;">
-                                                      <div class="row">
-                                                            <div class="col col-xs-12"><small>Mississauga Motors - Deal# 878671</small></div>
-                                                            
-                                                        <div class="col col-xs-12" style="color: gray"><strong>Not clear on the application status</strong></div>
-                                                            
-                                                            <div class="col col-xs-12 mailbox-details " style="color: grey">
-                                                            <small><strong><em>You wrote:</strong> <em>Half of consumers are willing to start the</small></em></em>
-                                                            </div>
-                                                     </div>
-                                                        
-                                                  </div>
-                                                    
-                                                    <div class="col col-xs-2 text-right"><small>Apr 01</small></div>
-                                                    
-                                                </div>
-
-                                                <div class="row clickable hoverClass grayBGColor" id="0" style="padding-bottom: 15px; padding-left: 10px; padding-top: 15px;">
-                                                <div class="col col-xs-2" >
-                                                      <input type="checkbox" style="margin-right: 5px;" >   
-                                                      <span class="change-icon">
-                                                            <i class="fa fa-thumb-tack fa-lg" aria-hidden="true"></i>
-                                                            <i style="color:#CC4B37" class="fa fa-thumb-tack fa-lg" aria-hidden="true" title="Pin It"></i>
-                                                      </span>
-                                                      
-                                                    </div>
-                                                    <div class="col col-xs-8" style="margin-left: -15px;">
-                                                      <div class="row">
-                                                        <div class="col col-xs-12"><small>Import Auto - Deal# 72312</small></div>
-                                                            
-                                                        <div class="col col-xs-12" style="color: gray">
-                                                               <strong>How do I register my applicants</strong>
-                                                        </div>
-                                                            
-                                                            <div class="col col-xs-12 mailbox-details " style="color: grey">
-                                                            <small><strong><em>You wrote:</strong> <em>Cannt login to our account</small></em></em>
-                                                            </div>
-                                          </div>
-                                                        
-                                                  </div>
-                                                    
-                                                    
-                                                    <div class="col col-xs-2 text-right"><small>Mar 19</small></div>
-                                                    
-                                                </div>
-
-                                                <div class="row clickable hoverClass " id="0" style="padding-bottom: 15px; padding-left: 10px; padding-top: 15px;">
-                                                  <div class="col col-xs-2" >
-                                                      <input type="checkbox" style="margin-right: 5px;" >   
-                                                      <span class="change-icon">
-                                                            <i class="fa fa-thumb-tack fa-lg" aria-hidden="true"></i>
-                                                            <i style="color:#CC4B37" class="fa fa-thumb-tack fa-lg" aria-hidden="true" title="Pin It"></i>
-                                                      </span>
-                                                      
-                                                    </div>
-                                                    <div class="col col-xs-8" style="margin-left: -15px;">
-                                                      <div class="row">
-                                                            <div class="col col-xs-12"><small>KEA Toronto - Deal# 988876</small></div>
-                                                            
-                                                        <div class="col col-xs-12" style="color: gray"><strong>Status of the application</strong></div>
-                                                            
-                                                            <div class="col col-xs-12 mailbox-details " style="color: grey">
-                                                            <small><strong><em>You wrote:</strong> <em>We are still awaiting on the status</small></em></em>
-                                                            </div>
-                                                 </div>
-                                                        
-                                                  </div>
-                                                    
-                                                    
-                                                    <div class="col col-xs-2 text-right"><small>Mar 15</small></div>
-                                                    
-                                                </div>
-
-                                                <div class="row clickable hoverClass grayBGColor" id="0" style="padding-bottom: 15px; padding-left: 10px; padding-top: 15px;">
-                                                  <div class="col col-xs-2" >
-                                                      <input type="checkbox" style="margin-right: 5px;" >   
-                                                      <span class="change-icon">
-                                                            <i class="fa fa-thumb-tack fa-lg" aria-hidden="true"></i>
-                                                            <i style="color:#CC4B37" class="fa fa-thumb-tack fa-lg" aria-hidden="true" title="Pin It"></i>
-                                                      </span>
-                                                      
-                                                    </div>
-                                                    <div class="col col-xs-8" style="margin-left: -15px;">
-                                                    <div class="row">
-                                                            <div class="col col-xs-12"><small><strong>Scarborough Motors - Deal#44567</strong></small></div>
-                                                            
-                                                            <div class="col col-xs-12"><strong class="heading">Upload Picture Issues</strong></div>
-                                                            
-                                                      <div class="col col-xs-12 mailbox-details">Half of consumers are willing to start</div>
-                                                    </div>
-                                                        
-                                                  </div>
-                                                    
-                                                  <div class="col col-xs-2 text-right"><small>Jan 12</small>
-                                                      <button class="btn btn-trend square btn-sm" >New</button>
-                                                  </div>
-                                                    
-                                                </div>
-                                                
-                                          </div>
-                                        </div>
+                                                </div> -->
                                        
-                                          
-                                     
                                          <!-- Description CONTENT Window-->
                                             <div class="col-xs-7 padding-right-0 padding-left-0 text-center">
                                                         
@@ -396,6 +218,16 @@
 
                                                         <a href="https://www.youtube.com/watch?v=U7O_GC3uDTA" role="button" data-width="640" data-height="360" class="btn btn-default">Watch Tutorial</a>
 
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div class="card contents_block">
+                                                    <div class="card" style="width: 20rem;">
+                                                        <div class="card-body">
+                                                        <h4 class="card-title block_subject_area"></h4>
+                                                        <p class="card-text block_msg_area"></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -440,6 +272,7 @@
                 <span class="text-content"><span>HELP</span></span>
             </div>
 
+<script type="text/javascript" src="../scripts/alerts.js"></script>
 
 </body>
 

@@ -9,6 +9,10 @@ app.use(express.static('public/pages/dealer-mailbox_files'))
 app.get('/dealer-mailbox-notifications', (req, res) => {
   res.sendFile(__dirname + '/public/pages/dealer-mailbox-notifications.html')
 })
+// /dealer-mailbox-auditalerts
+app.get('/dealer-mailbox-auditalerts', (req, res) => {
+  res.sendFile(__dirname + '/public/pages/dealer-mailbox-auditalerts.html')
+})
 
 
 app.get('/dealer-mailbox-pins', (req, res) => {

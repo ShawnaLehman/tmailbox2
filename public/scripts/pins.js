@@ -9,6 +9,21 @@ $(document).ready(function(){
       var content_count = 0;
       var urgent_count = 0;
 
+      function formatDate(date) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sept", "Oct",
+            "Nov", "Dec"
+        ];
+
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        // var year = date.getFullYear();
+
+        return monthNames[monthIndex] + ' ' + day;
+      }
+
       for(var i = 0; i < communications.length; i++) {
 
           if(communications[i].pinned === "TRUE")
@@ -16,15 +31,19 @@ $(document).ready(function(){
 
             if(communications[i].urgent_status === "TRUE") { urgent_count++ }
 
+            var date = new Date(communications[i].time);
             var has_been_read = communications[i].read_status == "TRUE";
             var is_urgent = communications[i].urgent_status === "TRUE";
             var is_pinned = communications[i].pinned === "TRUE";
             var one_block = "";
+            var read_string = "";
+              if (has_been_read) {read_string = "message-read"};
+
               if(is_urgent) {
-                one_block += "<div class=\"row clickable hoverClass urgent\"  style=\"padding-bottom: 15px; padding-left: 10px; padding-top: 15px;\" id=\""+ communications[i].id + "\">";
+                one_block += "<div class=\"row clickable hoverClass urgent " + read_string +" \" style=\"padding-bottom: 15px; padding-left: 10px; padding-top: 15px;\" id=\""+ communications[i].id + "\">";
               }
               else {
-                one_block += "<div class=\"row clickable hoverClass not-urgent\"  style=\"padding-bottom: 15px; padding-left: 10px; padding-top: 15px;\" id=\""+ communications[i].id + "\">";
+                one_block += "<div class=\"row clickable hoverClass not-urgent " + read_string + "\"  style=\"padding-bottom: 15px; padding-left: 10px; padding-top: 15px;\" id=\""+ communications[i].id + "\">";
               }
               one_block += "<div class=\"col col-xs-2\" >";
               one_block += "<input type=\"checkbox\" style=\"margin-right: 5px;\">";
@@ -34,30 +53,25 @@ $(document).ready(function(){
               else {
                 one_block += "<span class=\"change-icon\" title=\"Mark Urgent\"><i class=\"fa fa-star-o fa-lg\" aria-hidden=\"true\"></i></span></div>";
               }
-              
-
               one_block += "<div class=\"col col-xs-8\" style=\"margin-left: -15px;\">";
               one_block += "<div class=\"row\">";
               one_block += "<div class=\"col col-xs-12\"><small>Porsche North York</small></div>";
-              if (has_been_read) { 
-                one_block += "<div class=\"col col-xs-12\" style=\"color: gray\">";
-              } 
-              else {
-                one_block += "<div class=\"col col-xs-12\" style=\"color: black\">";; 
-              }
+
+              one_block += "<div class=\"col col-xs-12\">";
+
               one_block += "<strong>" + communications[i].comm_subject + "</strong>" 
               one_block += "</div>";
               one_block += "<div class=\"col col-xs-12 mailbox-details comm-content\">" + communications[i].comm_content + "</div>";
               one_block += "</div>";
               one_block += "</div>";
               one_block += "<div class=\"col col-xs-2 text-right\">";
-              one_block += "<small>Apr 19</small>";
+              one_block += "<small>" + formatDate(date) +"</small>";
               one_block += "<br><span class=\"unpin-icon\" title=\"Unpin Message\"><i style=\"color: #CC4B37;\" class=\"fa fa-thumb-tack fa-lg\" aria-hidden=\"true\"></i></span></div>";
               if (!has_been_read) { one_block += "<button class=\"btn btn-trend square btn-sm\">New</button>"; }
               one_block += "</div>";
               one_block += "</div>";
 
-              content_count++
+              content_count++;
             //putting one block inside the holder
              content_to_add += one_block;
           }
@@ -65,6 +79,7 @@ $(document).ready(function(){
 
           //Updating DOM
         $('#allTipsDiv').html(content_to_add);
+        console.log($('#pin_count'));
         $('#pin_count').html(content_count);
         $('#urgent_counter').html(urgent_count);
     }
@@ -72,11 +87,12 @@ $(document).ready(function(){
   }).then(function () {
 
     // Update the read status and display the message
-    $('.hoverClass').click(function(){
+    $('.hoverClass').click(function(event){
       $('.hoverClass').css("background", "white")
       $(this).css("background", "#93439a");
       // $(this).css("color", "white");
-  
+      
+      var $message_div = $(this);
       var selected_comm_id = $(this).attr('id');
   
       // go get content for selected message by its id
@@ -104,15 +120,16 @@ $(document).ready(function(){
             $new_btn.remove();
           }
         })
-      } 
+      }
+      
+      $('.selected-message').removeClass('selected-message');
+      $message_div.addClass('selected-message');
+      if (!$message_div.hasClass('message-read')) {
+        $message_div.addClass('message-read');
+      }
       
       console.log(selected_comm_id);
     })
-
-    // Change the icon
-    $('.change-icon').hover(function(event) {
-      // var $star = $(event.target);
-    });
 
     // Upin the current message and remove it from the dom
     $('.unpin-icon').click(function(event){

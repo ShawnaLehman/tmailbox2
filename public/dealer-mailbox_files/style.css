@@ -16712,6 +16712,15 @@ strong.heading{
 .fa-star-o:hover {
     color: #CC4B37;
 } */
+.is-pinned {
+    color: #CC4B37;
+}
+.message-read {
+    color: gray;
+}
+.selected-message {
+    color: white;
+}
 .big-thumb-track{
     margin-top: 85px;
     display: block;
