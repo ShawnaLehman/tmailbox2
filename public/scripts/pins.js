@@ -80,8 +80,9 @@ $(document).ready(function(){
 
           //Updating DOM
         $('#allTipsDiv').html(content_to_add);
-        console.log($('#pin_count'));
+        // console.log($('#pin_count'));
         $('#pin_count').html(content_count);
+        $('#pin_count2').html(content_count);
         $('#alert_count').html(alert_count);
         $('#urgent_counter').html(urgent_count);
     }
