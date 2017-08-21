@@ -8,6 +8,7 @@ $(document).ready(function(){
       var urgent_comms_count = 0;
       var content_count = 0;
       var urgent_count = 0;
+      var alert_count = 0;
 
       function formatDate(date) {
         var monthNames = [
@@ -25,12 +26,12 @@ $(document).ready(function(){
       }
 
       for(var i = 0; i < communications.length; i++) {
+          if(communications[i].comm_type=== "alert") { alert_count++ };
 
           if(communications[i].pinned === "TRUE")
           {
 
             if(communications[i].urgent_status === "TRUE") { urgent_count++ }
-
             var date = new Date(communications[i].time);
             var has_been_read = communications[i].read_status == "TRUE";
             var is_urgent = communications[i].urgent_status === "TRUE";
@@ -81,6 +82,7 @@ $(document).ready(function(){
         $('#allTipsDiv').html(content_to_add);
         console.log($('#pin_count'));
         $('#pin_count').html(content_count);
+        $('#alert_count').html(alert_count);
         $('#urgent_counter').html(urgent_count);
     }
 

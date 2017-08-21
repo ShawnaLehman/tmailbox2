@@ -1,6 +1,5 @@
 
 $(document).ready(function(){
-    console.log("Hi")
     $.ajax({
       url : "http://app2.loans.cars/api/dealer/messages/70",
       success : function (result) {
